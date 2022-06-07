@@ -256,7 +256,7 @@ catch {
 }
 
 try{
-	Write-Host -ForegroundColor yellow "Creating minmon Group..."
+	Write-Host -ForegroundColor yellow "Creating Minmon Group..."
 	#Minimal Monitoring
 	$Apply = 'isMinMon() && join(system.staticgroups,\",\") =~ \"HBR Clients/' + $Client + '\"'
 	$data = '{"name":"Minimal Monitoring","parentId":'+ $resultsDevbyType.id + ',"appliesTo":"'+ $Apply + '"}'
@@ -264,12 +264,12 @@ try{
 }
 
 catch {
-  Write-Host -ForegroundColor red "Creating minmon Group failed:"
+  Write-Host -ForegroundColor red "Creating Minmon Group failed:"
   Write-Host $_.ScriptStackTrace
 }
 
 try{
-	Write-Host -ForegroundColor yellow "Creating network Group..."
+	Write-Host -ForegroundColor yellow "Creating Network Group..."
 	#Network
 	$Apply = 'isNetwork() && join(system.staticgroups,\",\") =~ \"HBR Clients/' + $Client + '\"'
 	$data = '{"name":"Network","parentId":'+ $resultsDevbyType.id + ',"appliesTo":"'+ $Apply + '"}'
@@ -277,7 +277,7 @@ try{
 }
 
 catch {
-  Write-Host -ForegroundColor red "Creating network Group failed:"
+  Write-Host -ForegroundColor red "Creating Network Group failed:"
   Write-Host $_.ScriptStackTrace
 }
 
