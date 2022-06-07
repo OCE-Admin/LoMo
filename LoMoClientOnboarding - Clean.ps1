@@ -1,12 +1,12 @@
-$TranscriptOutputLocation = "C:\Users\dglosson\Desktop\temp\LoMoScript\"
+$TranscriptOutputLocation = "C:\temp\lomo.txt"
 
 <# account info #>
-$accessId = ''
-$accessKey = ''
-$company = 'hbrconsulting'
+$accessId = 'API-Information'
+$accessKey = 'API-Information'
+$company = 'APi-Information'
 
 <# Client Info #>
-$Client = 'Wilkes Artis'
+$Client = 'Enter The Client Name'
 
 <# NOC Locations #>
 $SitesArrray = @("On-Prem","Azure")
